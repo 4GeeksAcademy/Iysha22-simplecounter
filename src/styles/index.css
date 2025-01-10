@@ -1,12 +1,57 @@
-
-/* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #000;
+    color: white;
+  }
+  
+  /* Estilo del contador */
+  .counter {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+  }
+  
+ 
+  
+  .number {
+    background: grey;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 60px;
+    width: 80px;
+    text-align: center;
+  }
+  
+  /* Estilo de los personajes */
+  .characters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+  }
+  
+  .character img {
+    width: 150px;
+    border-radius: 10px;
+    opacity: 0.5;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  
+  /* Animaciones */
+  @keyframes celebrate {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .character.active img {
+    transform: scale(1.2);
+    opacity: 1;
+    animation: celebrate 0.5s;
+  }
+  
